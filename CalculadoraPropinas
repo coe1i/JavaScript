@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Propinas</title>
+    <style>
+        html{
+            background-color: #c3daf1;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        div{
+            background-color: #bcdaed;
+            background-image: linear-gradient(to bottom, #bcdaed, #a0bedc);
+            border-radius: 10px;
+            width: auto;
+            height: auto;
+            margin: 0 auto;
+            padding: 10px;
+        }
+        h1{
+            text-align: center;
+            color: beige;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora de Propinas</h1>
+    <div id="cuenta">Valor de la cuenta</div>
+    <div id="propina">Propina</div>
+    <div id="total">Total</div>
+    <script>
+        //prompt que pida el valor de la cuenta
+        var cuenta = prompt("Ingrese el valor de la cuenta");
+        //prompt que pida el valor del pago
+        var pago = prompt("Ingrese el valor del pago");
+ 
+ 
+        function calcularCambio(cuenta, pago){
+            //crear una variable que guarde el cambio
+            var cambio = pago - cuenta;
+            //retornar el cambio con 2 decimales
+            return cambio.toFixed(2);
+        }
+        
+        function calcularPropina(cuenta){
+            //crear una variable que guarde el valor de la propina
+            var propina = pago-cuenta;
+            //retornar el valor de la propina
+            return propina;
+        }
+        //valor de la cuenta
+        document.getElementById("cuenta").innerHTML = "Valor de la cuenta: " + cuenta;
+        //valor de la propina
+        document.getElementById("propina").innerHTML = "Propina: " + calcularPropina(cuenta);
+        //mostrar el total en el div
+        document.getElementById("total").innerHTML = "Total: " + pago;
+
+    </script>
+
+</body>
+</html>
